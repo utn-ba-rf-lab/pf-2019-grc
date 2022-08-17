@@ -1,23 +1,24 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# 
-# Copyright 2019 <+YOU OR YOUR COMPANY+>.
-# 
+#
+# Copyright 2022 LB.
+#
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3, or (at your option)
 # any later version.
-# 
+#
 # This software is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# 
+#
 # You should have received a copy of the GNU General Public License
 # along with this software; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
-# 
+#
+
 
 import numpy as np
 import subprocess
@@ -203,25 +204,11 @@ class Mercurial_SDR(gr.sync_block):
 
                 parameter04 = self.psk_fc/self.psk_fs;
 
-                if(psk_key == "bpsk"):
-                    parameter01 = 120e6/(2*self.psk_fc);
-                    parameter02 = 2;
-                    modulation_number = 3
+                parameter01 = 120e6/(2*self.psk_fc);
+                parameter02 = 2;
+                modulation_number = 3
 
-                    print("[INFO] | BPSK modulation is set");
-        
-                elif(psk_key == "qpsk"):
-                    parameter01 = 120e6/(4*self.psk_fc);
-                    parameter02 = 4;
-                    modulation_number = 4
-                    print("[INFO] | QPSK modulation is set");
-        
-                elif(psk_key == "8psk"):
-                    parameter01 = 120e6/(8*self.psk_fc);
-                    parameter02 = 8;
-                    modulation_number = 5
-       
-                    print("[INFO] | 8-PSK modulation is set");
+
     
 
             # Genera el archivo con los parámetros configurables de los .v
